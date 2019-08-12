@@ -5,7 +5,7 @@ class EnviarEmail{
 
         ini_set("error_reporting", E_ALL);
 
-        $caminhoDoXml = simplexml_load_file("clientes.xml");
+        $caminhoDoXml = simplexml_load_file("clientes2.xml");
         $i = 0;
         foreach ($caminhoDoXml as $TORCEDORES) {
             $emails = $TORCEDORES->EMAIL;
@@ -47,5 +47,5 @@ class EnviarEmail{
     }
 }
 $EnviarEmail = new EnviarEmail();
-$EnviarEmail->enviar();
+$EnviarEmail->email();
 ?>
